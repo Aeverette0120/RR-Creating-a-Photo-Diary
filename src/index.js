@@ -1,3 +1,6 @@
+import { koalas } from './koalas.js'
+
+import { renderKoalaCardImage } from './CanyouSeeme.js'
 
 let activeKoala = null
 
@@ -53,20 +56,6 @@ let renderKoalaCard = koala => {
     )
 
     return koalaCard
-}
-
-// Renders the image of a koala card
-let renderKoalaCardImage = koala => {
-    let imageContainer = document.createElement('div')
-    let koalaImage = document.createElement('img')
-
-    imageContainer.setAttribute('class', 'image')
-
-    koalaImage.setAttribute('src', koala.imageURL)
-
-    imageContainer.append(koalaImage)
-
-    return imageContainer
 }
 
 // Renders the content of a koala card (their name and description)
